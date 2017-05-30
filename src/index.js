@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
 // Import components
-import SearchBar from './components/search_bar';
-import VideoList from './components/video_list';
-import YTSearch from 'youtube-api-search';
+import SearchBar from './components/search_bar'
+import VideoList from './components/video_list'
+import VideoDetail from './components/video_detail'
+import YTSearch from 'youtube-api-search'
 
 
 const API_KEY = "AIzaSyDD0OIOG4cdYHkdyECuwTsLKD9aIbmZfSA";
@@ -24,6 +25,7 @@ class App extends Component {
     return(
       <div>
         <SearchBar />
+        <VideoDetail video={this.state.videos[0]} />
         <VideoList videos={ this.state.videos } />
       </div>
     )

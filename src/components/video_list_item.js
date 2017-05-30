@@ -1,13 +1,13 @@
-import React from 'react';
+import React from 'react'
 
-const VideoListItem = ({ video }) => {
-  const videoUrl = video.snippet.thumbnails.default.url;
+const VideoListItem = ({video}) => {
+  const videoUrl = video.snippet.thumbnails.default.url
 
-  return(
+  return (
     <li className="list-group-item">
       <div className="video-list media">
         <div className="media-left">
-          <img className="media-object" src={ videoUrl } />
+          <img alt="" className="media-object" src={videoUrl} />
         </div>
 
         <div className="media-body">
@@ -18,4 +18,4 @@ const VideoListItem = ({ video }) => {
   )
 }
 
-export default VideoListItem;
+export default VideoListItem

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const VideoListItem = ({video}) => {
+const VideoListItem = ({ video }) => {
   const videoUrl = video.snippet.thumbnails.default.url
 
   return (

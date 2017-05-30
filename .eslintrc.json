@@ -6,13 +6,8 @@
         "import"
     ],
     "rules": {
-        "semi": [
-            "error",
-            "never"
-        ],
-        "react/jsx-filename-extension": [
-            1,
-            { "extensions": [".js", ".jsx"] }
-        ]
+        "semi": ["error","never"],
+        "react/jsx-filename-extension": [1,{ "extensions": [".js", ".jsx"] }],
+        "arrow-body-style": ["error", "as-needed"]
     }
 }

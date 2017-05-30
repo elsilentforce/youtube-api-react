@@ -6,7 +6,7 @@ const VideoList = (props) => {
   // Creates an array of VideoList Items
   const VideoListItems = props.videos.map(
     (video) => {
-      return <VideoListItem  video={ video } />
+      return <VideoListItem key={ video.etag } video={ video } />
     }
   );
 

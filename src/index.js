@@ -1,36 +1,39 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 // Import components
+import YTSearch from 'youtube-api-search'
 import SearchBar from './components/search_bar'
 import VideoList from './components/video_list'
 import VideoDetail from './components/video_detail'
-import YTSearch from 'youtube-api-search'
 
 
-const API_KEY = "AIzaSyDD0OIOG4cdYHkdyECuwTsLKD9aIbmZfSA";
+const API_KEY = 'AIzaSyDD0OIOG4cdYHkdyECuwTsLKD9aIbmZfSA'
 
 
 // Builds the complete App.
 class App extends Component {
 
-  constructor(props){
-    super(props);
-    this.state = { videos: [] };
+  constructor(props) {
+    super(props)
+    this.state = { videos: [] }
     YTSearch({ key: API_KEY, term: 'Huawei' }, videos => {
-      this.setState({ videos });
-    });
+      this.setState({ videos })
+    })
   }
 
-  render(){
-    return(
+  render() {
+    return (
       <div>
         <SearchBar />
         <VideoDetail video={this.state.videos[0]} />
-        <VideoList videos={ this.state.videos } />
+        <VideoList
+          videos={this.state.videos}
+          onVideoSelect={selectedVideo => this.setState({ selectedVideo })}
+        />
       </div>
     )
   }
 
 }
 // Render in DOM
-ReactDOM.render( <App />, document.querySelector(".container") );
+ReactDOM.render(<App />, document.querySelector('.container'))

@@ -21,8 +21,10 @@ class App extends Component {
       videos: [],
       selectedVideo: null,
     }
+    // Set first video search as 'Huawei'
     this.videoSearch('Huawei')
   }
+  // Search a video by term
   videoSearch(term) {
     YTSearch({ key: API_KEY, term }, (videos) => {
       this.setState({

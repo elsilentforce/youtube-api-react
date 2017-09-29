@@ -1,25 +1,21 @@
-# ReduxSimpleStarter
+# Youtube Searcher
+This is a little ReactJS app to search videos, it implements the Youtube API on a Webpack project.
 
-Interested in learning [Redux](https://www.udemy.com/react-redux/)?
+### Installation
+All you need to do is clone this repo then run `npm install`
 
-### Getting Started
+### API Config
+To use this app properly, you must to set your `API_KEY`.
+To do that please create a new file on this path `src/env.js`
 
-There are two methods for getting started with this repo.
-
-#### Familiar with Git?
-Checkout this repo, install dependencies, then start the gulp process with the following:
-
+The created file must be something like this:
 ```
-> git clone https://github.com/StephenGrider/ReduxSimpleStarter.git
-> cd ReduxSimpleStarter
-> npm install
-> npm start
+const API_KEY = 'YOUR_API_KEY'
+export default API_KEY
+```
+When you finish that just run:
+```
+npm start
 ```
 
-#### Not Familiar with Git?
-Click [here](https://github.com/StephenGrider/ReactStarter/releases) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
-
-```
-> npm install
-> npm start
-```
+And see the magic

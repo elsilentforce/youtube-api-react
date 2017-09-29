@@ -1,4 +1,4 @@
-# Youtube Searcher
+# Youtube Video Searcher
 This is a little ReactJS app to search videos, it implements the Youtube API on a Webpack project.
 
 ### Installation
@@ -17,5 +17,9 @@ When you finish that just run:
 ```
 npm start
 ```
+And see the magic come to live
 
-And see the magic
+### Demo Link
+You can see this application running on a personal AWS EC2 Instance.
+
+[Just click here!](http://54.207.25.16)
